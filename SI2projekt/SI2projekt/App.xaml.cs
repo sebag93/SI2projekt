@@ -22,7 +22,7 @@ namespace SI2projekt
         {
             InitializeComponent();
 
-            MainPage = new SI2projekt.MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
