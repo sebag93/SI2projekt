@@ -161,11 +161,9 @@ namespace SI2projekt.Pages
 
         private void SetNavigation(string address)
         {
-            //zakladamy na razie, ze wszystkie zajecia sa w jednym budynku
-            //Czarneckiego 16, wspolrzedne 50.012409, 22.674363
-            //50.012444, 22.673722
+
             if (string.IsNullOrEmpty(address))
-                address = "Czarneckiego 16, Jaroslaw, Polska";
+                address = "50.019312, 21.989142";
 
             switch (Device.OS)
             {

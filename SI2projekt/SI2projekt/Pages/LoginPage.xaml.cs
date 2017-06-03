@@ -26,7 +26,7 @@ namespace SI2projekt.Pages
 
         void tapImage_Tapped1(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("http://pwste.edu.pl"));
+            Device.OpenUri(new Uri("http://w.prz.edu.pl/"));
         }
         public void langpol()
         {
