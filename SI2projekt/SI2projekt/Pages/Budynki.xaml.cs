@@ -28,18 +28,37 @@ namespace SI2projekt.Pages
                 buldings = new ObservableCollection<ViewModel>();
         public Budynki()
         {
-            buldings.Add(new ViewModel("Budynek IIT", "50.012190, 22.673114")); //vievModel obsługa wszystkich akcji połaczonych z widokiem
-            buldings.Add(new ViewModel("Budynek J1", "50.012720, 22.673061"));
-            buldings.Add(new ViewModel("Budynek J2", "50.012551, 22.672189"));
-            buldings.Add(new ViewModel("Budynek J3", "50.012379, 22.671331"));
-            buldings.Add(new ViewModel("Budynek J4", "50.012203, 22.670478"));
-            buldings.Add(new ViewModel("Hala sportowa", "50.013283, 22.673329"));
-            buldings.Add(new ViewModel("Budynek P", "50.012032, 22.671494"));
-            buldings.Add(new ViewModel("Budynek IEiZ", "50.012270, 22.672562"));
-            buldings.Add(new ViewModel("Budynek A", "50.010273, 22.673660"));
-            buldings.Add(new ViewModel("Budynek B", "50.009959, 22.673478"));
-            buldings.Add(new ViewModel("Budynek C", "50.010065, 22.672634"));
-            buldings.Add(new ViewModel("Budynek D", "50.010459, 22.672850"));
+            buldings.Clear();
+            buldings.Add(new ViewModel("Budynek A Wydział Elektrotechniki i Informatyki", "50.026864, 21.985243")); //vievModel obsługa wszystkich akcji połaczonych z widokiem
+            buldings.Add(new ViewModel("Budynek B Wydział Elektrotechniki i Informatyki - Dziekanat", "50.026831, 21.984441"));
+            buldings.Add(new ViewModel("Budynek C Wydział Budowy Maszyn i Lotnictwa", "50.026305, 21.983746"));
+            buldings.Add(new ViewModel("Budynek D Wydział Elektrotechniki i Informatyki", "50.025810, 21.983674"));
+            buldings.Add(new ViewModel("Budynek E Wydział Elektrotechniki i Informatyki", "50.026328, 21.984691"));
+            buldings.Add(new ViewModel("Budynek F Wydział Elektrotechniki i Informatyki, Zakład Poligrafii, Oficyna Wydawnicza", "50.025956, 21.983414"));
+            buldings.Add(new ViewModel("Budynek G Wydział Budowy Maszyn i Lotnictwa", "50.025964, 21.984189"));
+            buldings.Add(new ViewModel("Budynek H Wydział Chemiczny - Dziekanat", "50.019830, 21.985741"));
+            buldings.Add(new ViewModel("Budynek J Studium Języków Obcych, Studium Wychowania Fizycznego i Sportu", "50.019441, 21.980521"));
+            buldings.Add(new ViewModel("Budynek K Wydział Budownictwa, Inżynierii Środowiska i Architektury, Wydział Matematyki i Fizyki Stosowanej - Katedra Fizyki, Katedra Matematyki", "50.019502, 21.985528"));
+            buldings.Add(new ViewModel("Budynek L Wydział Budowy Maszyn i Lotnictwa - Dziekanat", "50.018154, 21.986880"));
+            buldings.Add(new ViewModel("Budynek Ł Hala Sportowa", "50.018414, 21.980445"));
+            buldings.Add(new ViewModel("Budynek O Stołówka Akademik", "50.020534, 21.983454"));
+            buldings.Add(new ViewModel("Budynek P Wydział Budownictwa, Inżynierii Środowiska i Architektury- Dziekanat", "50.019011, 21.981421"));
+            buldings.Add(new ViewModel("Budynek R Hotel Asystenta", "50.019559, 21.980021"));
+            buldings.Add(new ViewModel("Budynek S Wydział Zarządzania - Dziekanat, Zespół Sal Wykładowych", "50.019328, 21.987269"));
+            buldings.Add(new ViewModel("Budynek W Laboratorium Geo-Drogowe WBIŚiA", "50.017030, 21.982155"));
+            buldings.Add(new ViewModel("Budynek V Regionalne Centrum Dydaktyczno-Konferencyjne i Biblioteczno-Administracyjne - Rektorat, Administracja", "50.019176, 21.988837"));
+            buldings.Add(new ViewModel("DS Promień", "50.019984, 21.981735"));
+            buldings.Add(new ViewModel("DS Arcus", "50.019684, 21.982271"));
+            buldings.Add(new ViewModel("DS Nestor", "50.020260, 21.982089"));
+            buldings.Add(new ViewModel("DS Akapit", "50.019877, 21.982754"));
+            buldings.Add(new ViewModel("DS Pingwin", "50.020418, 21.982695"));
+            buldings.Add(new ViewModel("DS Ikar", "50.020039, 21.983360"));
+            buldings.Add(new ViewModel("Radio Centrum", "50.020039, 21.983360"));
+            buldings.Add(new ViewModel("DS Alchemik", "50.018564, 21.982470"));
+            buldings.Add(new ViewModel("Klub Plus", "50.019726, 21.980877"));
+            buldings.Add(new ViewModel("Przychodnia Akademicka", "50.019726, 21.980877"));
+            buldings.Add(new ViewModel("Wiata Grzybek", "50.019402, 21.983178"));
+            buldings.Add(new ViewModel("Preinkubator Akademicki", "50.018047, 21.985492"));
             InitializeComponent();
             if (App.GetApp().AppSettings.ContainsKey("colorschema") == false || (App.GetApp().AppSettings.ContainsKey("colorschema") == true && App.GetApp().AppSettings.Data["colorschema"] == "standard"))
             {
