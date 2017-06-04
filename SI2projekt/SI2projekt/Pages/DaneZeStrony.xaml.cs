@@ -35,7 +35,7 @@ namespace SI2projekt.Pages
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var response = client.GetAsync(new Uri("http://arturtest.cba.pl/dane.php")).Result;
+                    var response = client.GetAsync(new Uri("http://arturtest.cba.pl/si2projekt.php")).Result;
                     var pageContent = response.Content.ReadAsStringAsync().Result;
 
                     if (response.IsSuccessStatusCode)
