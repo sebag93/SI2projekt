@@ -11,14 +11,14 @@ namespace SI2projekt.Plan
 {
     public class Grabber
     {
-        const string page = "http://wu.pwste.edu.pl/WU/logon.jsp";
+        const string page = "http://arturtest.cba.pl/SI2projekt/index.php";
 
         private static string GetPageContent(string user, string password)
         {
             using (HttpClient client = new HttpClient())
             {
                 string format =
-                    string.Format("{0}?login={1}&password={2}&logon=Zaloguj&return=%2FWU%2Fschedule.jsp%3FfromRedirect%3Dtrue",
+                    string.Format("{0}?login={1}&haslo={2}",
                     page, WebUtility.UrlEncode(user), WebUtility.UrlEncode(password));//sprawdza url zeby stwierdzic poprawnosc logowania
                 var response = client.GetAsync(new Uri(format)).Result;
                 if (response.IsSuccessStatusCode)
@@ -117,36 +117,45 @@ namespace SI2projekt.Plan
                             continue;
                         foreach (var date in dates.Split(' '))
                         {
-                            string adres = "50.012190, 22.673114";
-                            if (room.Contains("Budynek IIT"))
-                                adres = "50.012190, 22.673114";
-                            if (room.Contains("Budynek J1"))
-                                adres = "50.012720, 22.673061";
-                            if (room.Contains("Budynek J2"))
-                                adres = "50.012551, 22.672189";
-
-                            if (room.Contains("Budynek J3"))
-                                adres = "50.012379, 22.671331";
-                            if (room.Contains("Budynek J4"))
-                                adres = "50.012203, 22.670478";
-                            if (room.Contains("Hala sportowa"))
-                                adres = "50.013283, 22.673329";
-
-                            if (room.Contains("Budynek P"))
-                                adres = "50.012032, 22.671494";
-                            if (room.Contains("Budynek IEiZ"))
-                                adres = "50.012270, 22.672562";
+                            string adres = "50.019176, 21.988837";
                             if (room.Contains("Budynek A"))
-                                adres = "50.010273, 22.673660";
-
+                                adres = "50.026864, 21.985243";
                             if (room.Contains("Budynek B"))
-                                adres = "50.009959, 22.673478";
+                                adres = "50.026831, 21.984441";
                             if (room.Contains("Budynek C"))
-                                adres = "50.010065, 22.672634";
+                                adres = "50.026305, 21.983746";
                             if (room.Contains("Budynek D"))
-                                adres = "50.010459, 22.672850";
+                                adres = "50.025810, 21.983674";
+                            if (room.Contains("Budynek E"))
+                                adres = "50.026328, 21.984691";
+                            if (room.Contains("Budynek F"))
+                                adres = "50.025956, 21.983414";
+                            if (room.Contains("Budynek G"))
+                                adres = "50.025964, 21.984189";
+                            if (room.Contains("Budynek H"))
+                                adres = "50.019830, 21.985741";
+                            if (room.Contains("Budynek J"))
+                                adres = "50.019441, 21.980521";
+                            if (room.Contains("Budynek K"))
+                                adres = "50.019502, 21.985528";
+                            if (room.Contains("Budynek L"))
+                                adres = "50.018154, 21.986880";
+                            if (room.Contains("Budynek Ł"))
+                                adres = "50.018414, 21.980445";
+                            if (room.Contains("Budynek O"))
+                                adres = "50.020534, 21.983454";
+                            if (room.Contains("Budynek P"))
+                                adres = "50.019011, 21.981421";
+                            if (room.Contains("Budynek R"))
+                                adres = "50.019559, 21.980021";
+                            if (room.Contains("Budynek S"))
+                                adres = "50.019328, 21.987269";
+                            if (room.Contains("Budynek W"))
+                                adres = "50.017030, 21.982155";
+                            if (room.Contains("Budynek V"))
+                                adres = "50.019176, 21.988837";
                             //reszta budynkwo 
-                            tmp.Add(new Slot() { Name = name.Remove(name.IndexOf('\n')).Trim(), Location = room, LocationAdress = adres, Start = DateTime.Parse(date + " " + startTime), Stop = DateTime.Parse(date + " " + endTime) });
+                            tmp.Add(new Slot() { Name = name, Location = room, LocationAdress = adres, Start = DateTime.Parse(date + " " + startTime), Stop = DateTime.Parse(date + " " + endTime) });
                         }
                     }
                 }
